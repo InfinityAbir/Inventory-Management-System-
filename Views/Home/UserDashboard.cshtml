@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "User Dashboard";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">User Dashboard</h2>
+        <a href="/Account/Logout" class="btn btn-danger">Logout</a>
+    </div>
+
+    <div class="card shadow-lg">
+        <div class="card-body">
+            <h2 class="card-title text-primary mb-4">Welcome, <strong>User</strong>!</h2>
+            <p class="lead">Manage your order, view products and more — all from one place.</p>
+            <hr />
+
+            <div class="row text-center mt-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Place Order</h5>
+                            <p class="card-text">Add product in your cart.</p>
+                            <a href="/Orders/Create" class="btn btn-outline-primary">Order Something</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-success">
+                        <div class="card-body">
+                            <h5 class="card-title">View Products</h5>
+                            <p class="card-text">Explore all available items in stock.</p>
+                            <a href="/Items" class="btn btn-outline-success">View Products</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Reports</h5>
+                            <p class="card-text">Check reports and inventory statistics.</p>
+                            <a href="/Report" class="btn btn-outline-info">View Reports</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "_Layout";
+}
+<div class="text-center mt-4">
+    <a asp-controller="Items" asp-action="Create" class="btn btn-primary">➕ Add Product</a>
+    <a asp-controller="Orders" asp-action="Create" class="btn btn-secondary ms-3">🛒 Add Orders</a>
+    <a asp-controller="Items" asp-action="Delete" asp-route-id="1" class="btn btn-danger ms-3">🗑 Delete Product</a>
+</div>

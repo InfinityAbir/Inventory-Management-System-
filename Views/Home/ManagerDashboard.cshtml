@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Manager Dashboard";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">User Dashboard</h2>
+        <a href="/Account/Logout" class="btn btn-danger">Logout</a>
+    </div>
+    <div class="text-center mb-4">
+        <h2 class="text-primary"> Welcome, Manager!</h2>
+        <p class="lead">Here you can manage inventory, view reports, and oversee operations efficiently.</p>
+    </div>
+
+    <h3 class="mb-4"> Dashboard Overview</h3>
+
+    <div class="row g-4">
+        <!-- Total Inventory -->
+        <div class="col-md-4">
+            <div class="card text-white bg-primary shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Total Products</h5>
+                    <p class="card-text fs-4">@ViewBag.TotalProducts items</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reports -->
+        <div class="col-md-4">
+            <div class="card text-white bg-success shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Reports Generated</h5>
+                    <p class="card-text fs-4">@ViewBag.TotalReports reports</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Low Stock Alerts -->
+        <div class="col-md-4">
+            <div class="card text-white bg-danger shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Low Stock Alerts</h5>
+                    <p class="card-text fs-4">@ViewBag.LowStockItems items</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

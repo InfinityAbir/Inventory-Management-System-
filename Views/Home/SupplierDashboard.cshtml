@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Supplier Dashboard";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">Supplier Dashboard</h2>
+        <a href="/Account/Logout" class="btn btn-danger">Logout</a>
+    </div>
+
+    <div class="text-center mb-4">
+        <h2 class="text-info">🚚 Welcome, Supplier!</h2>
+        <p class="lead">
+            Here you can manage inventory deliveries, view supply reports, and keep track of your shipments.
+        </p>
+    </div>
+
+    <h3 class="mb-4">📦 Dashboard Overview</h3>
+
+    <div class="row g-4">
+        <!-- Pending Deliveries Card -->
+        <div class="col-md-4">
+            <div class="card text-white bg-warning shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Pending Deliveries</h5>
+                    <p class="card-text fs-4">
+                        @ViewBag.PendingDeliveries ?? 0 deliveries
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Products Supplied Card -->
+        <div class="col-md-4">
+            <div class="card text-white bg-success shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Total Products Supplied</h5>
+                    <p class="card-text fs-4">
+                        @ViewBag.TotalProductsSupplied ?? 0 items
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supply Reports Card -->
+        <div class="col-md-4">
+            <div class="card text-white bg-primary shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Supply Reports</h5>
+                    <p class="card-text fs-4">
+                        @ViewBag.SupplyReportCount ?? 0 reports
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

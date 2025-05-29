@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Page Title";
+    Layout = "_Layout";
+}
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+    <div>
+        <label>Username</label>
+        <input type="text" name="username" required class="form-control" />
+    </div>
+    <br />
+    <div>
+        <label>Password</label>
+        <input type="password" name="password" required class="form-control" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Login</button>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color: red;">@ViewBag.Error</p>
+    }
+</form>

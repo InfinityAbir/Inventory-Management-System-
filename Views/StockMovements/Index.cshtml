@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Page Title";
+    Layout = "_Layout";
+}
+
+@model IEnumerable<Inventory_Management_System.Models.StockMovement>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Action)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantityChanged)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeStamp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Item.ItemId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Action)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantityChanged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeStamp)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StockMovementId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StockMovementId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StockMovementId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

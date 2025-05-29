@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+<style>
+    body {
+        background: url('/Images/background.jpeg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .home-container {
+        background-color: rgba(0, 0, 0, 0.6); /* Optional: dark overlay */
+        padding: 40px;
+        border-radius: 20px;
+        color: white;
+    }
+
+    .btn {
+        font-weight: bold;
+    }
+</style>
+
+<div class="container mt-5 text-center home-container">
+    <h1 class="display-4">📦 Welcome to Inventory Management System</h1>
+    <p class="lead mt-3">Manage your warehouse, products, orders, and users from one place.</p>
+
+    <div class="mt-5">
+        <a asp-controller="Account" asp-action="Login" class="btn btn-primary btn-lg me-3">🔐 Login</a>
+        <a asp-controller="Reports" asp-action="Index" class="btn btn-secondary btn-lg">📊 Reports</a>
+    </div>
+</div>

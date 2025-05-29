@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "WareHouse Dashboard";
+}
+
+@{
+    ViewBag.Title = "Warehouse Dashboard";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="text-primary">User Dashboard</h2>
+        <a href="/Account/Logout" class="btn btn-danger">Logout</a>
+    </div>
+    <div class="card shadow-lg border-0">
+        <div class="card-body">
+            <h2 class="text-primary mb-3"> Welcome to the Warehouse!</h2>
+            <p class="lead">Here you can check product stocks, track inventory levels, and more.</p>
+
+            <hr />
+
+            <div class="row mt-4 text-center">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-warning">
+                        <div class="card-body">
+                            <h5 class="card-title"> View Stock Levels</h5>
+                            <p class="card-text">Monitor current product quantities and restock needs.</p>
+                            <a href="/Warehouse/Stock" class="btn btn-outline-warning">View Stocks</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-secondary">
+                        <div class="card-body">
+                            <h5 class="card-title">Product Lookup</h5>
+                            <p class="card-text">Search products by name, category, or ID.</p>
+                            <a href="/Warehouse/Search" class="btn btn-outline-secondary">Search Products</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
